@@ -8,8 +8,65 @@ let numero2 = parseInt(prompt("Ingresa el segundo número:"));
 // Solicitar tercer número
 let numero3 = parseInt(prompt("Ingresa el tercer número:"));
 
+//validar que ingresen números
+
+if(isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+    return "Error, ingresa numeros validos";
+}
+
 let resultado="";
-let mayor;
+let mayor,menor,centrado;
+
+    // Verificar si los tres números son iguales
+    if (numero1 === numero2 && numero2 === numero3) {
+        resultado = `Los tres números son iguales: ${numero1}`;
+        console.log(resultado);
+        return resultado;
+    } 
+
+    //verificar si hay numeros iguales
+    if(numero1 == numero2){
+        //resultado = `Numero 1 y Numero 2 son iguales: ${numero1}`;
+        //console.log(resultado);
+        if(numero1 > numero3) {
+            resultado = `Numero 1 y Numero 2 son iguales: ${numero1} ${numero2} y son mayores que Numero 3: ${numero3}`;
+            // console.log(resultado);
+            // return resultado;
+        }
+        else {
+            resultado = `Numero 1 y Numero 2 son iguales: ${numero1} ${numero2} y son menores que Numero 3: ${numero3}`;
+            // console.log(resultado);
+            // return resultado;
+        }
+    }
+    else if(numero2 == numero3){
+        // resultado = `Numero 2 y Numero 3 son iguales: ${numero2}`;
+        // console.log(resultado);
+        if(numero2 > numero1){
+            resultado = `Numero 2 y Numero 3 son iguales: ${numero2} ${numero3} y son mayores que Numero 1: ${numero1}`;
+            // console.log(resultado);
+            // return resultado;
+        }
+        else {
+            resultado = `Numero 2 y Numero 3 son iguales: ${numero2} ${numero3} y son menores que Numero 1: ${numero1}`;
+            // console.log(resultado);
+            // return resultado;
+        }
+    }
+    else if (numero1 == numero3){
+        // resultado = `Numero 1 y Numero 3 son iguales: ${numero3}`;
+        // console.log(resultado);
+        if(numero1 > numero2){
+            resultado = `Numero 1 y Numero 3 son iguales: ${numero1} ${numero3} y son mayores que Numero 2: ${numero2}`;
+            // console.log(resultado);
+            // return resultado;
+        }
+        else {
+            resultado = `Numero 1 y Numero 3 son iguales: ${numero1} ${numero3} y son menores que Numero 2: ${numero2}`;
+            // console.log(resultado);
+            // return resultado;
+        }
+    }
 
     //4-7-9
     if(numero1 > numero2){
@@ -38,10 +95,9 @@ let mayor;
     resultado = mayor;
 
     // Mostrar los valores guardados en la consola
-    console.log("Número 1:", numero1);
-    console.log("Número 2:", numero2);
-    console.log("Número 3:", numero3);
-    console.log(resultado);
+    console.log(`Números ingresados: ${numero1}, ${numero2}, ${numero3}`);
+    console.log(resultado); //mensaje
+    //orden ascendente/descendente
 
     return resultado;
 }
