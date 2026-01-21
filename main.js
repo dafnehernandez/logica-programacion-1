@@ -11,18 +11,19 @@ function showResult() {
         // estilos para el resultado
         resultOutput.style.fontWeight = '600';
         resultOutput.style.color = '#b0652b';
+        resultOutput.style.whiteSpace = 'pre-line';
     }
 }
 
+// Solo usar addEventListener, NO onclick en HTML
 document.addEventListener("DOMContentLoaded", () => {
-    const button = document.querySelector('button');
+    const button = document.getElementById('compare-button');
     if (button) {
         button.addEventListener('click', showResult);
     }
-    // initMenu();
-    // Fondo inicial = estrellas
-    //setBackgroundForExercise(0);
+     // initMenu();
+//     // Fondo inicial = estrellas
+//     //setBackgroundForExercise(0);
 });
-
 
     

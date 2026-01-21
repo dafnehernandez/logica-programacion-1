@@ -54,24 +54,24 @@ let mensaje="", resultado="";
     const centro = ordenDescendente[1];
     const menor = ordenDescendente[2];
 
-    // Mostrar los valores guardados en la consola
+    // Mostrar en consola (con saltos de línea)
     console.log(`Números ingresados: ${numero1}, ${numero2}, ${numero3}`);
-    //orden ascendente/descendente
-    console.log(`Orden descendente: ${ordenDescendente.join(", ")}`);
-    console.log(`Orden ascendente: ${ordenAscendente.join(", ")}`);
-
+    
     let evaluacion =  mensaje == "" 
         ? `Número mayor: ${mayor}, Número del centro: ${centro}, Número menor: ${menor}\n\n`
         : `${mensaje}\n\n`;
 
     console.log (evaluacion);
 
-    //Se forma mensaje de resultado
-    resultado += `Números ingresados: ${numero1}, ${numero2}, ${numero3}` 
-              + evaluacion 
-              + `Orden descendente: ${ordenDescendente.join(", ")}\n Orden ascendente: ${ordenAscendente.join(", ")}`;
+    // Orden ascendente/descendente
+    console.log(`Orden descendente: ${ordenDescendente.join(", ")}`);
+    console.log(`Orden ascendente: ${ordenAscendente.join(", ")}`);
 
-    //console.log(resultado `Número mayor: ${mayor}\n` + `Número del centro: ${centro}\n` +`Número menor: ${menor}\n\n`); //mensaje
+    // Construir resultado para HTML con saltos de línea
+    resultado = `Números ingresados: ${numero1}, ${numero2}, ${numero3}\n\n
+    ${evaluacion} 
+    Orden descendente: ${ordenDescendente.join(", ")}\n\n
+    Orden ascendente: ${ordenAscendente.join(", ")}`;
 
     return resultado;
 }
