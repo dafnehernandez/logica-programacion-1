@@ -25,47 +25,22 @@ let mayor,menor,centrado;
     } 
 
     //verificar si hay numeros iguales
-    if(numero1 == numero2){
-        //resultado = `Numero 1 y Numero 2 son iguales: ${numero1}`;
-        //console.log(resultado);
-        if(numero1 > numero3) {
-            resultado = `Numero 1 y Numero 2 son iguales: ${numero1} ${numero2} y son mayores que Numero 3: ${numero3}`;
-            // console.log(resultado);
-            // return resultado;
-        }
-        else {
-            resultado = `Numero 1 y Numero 2 son iguales: ${numero1} ${numero2} y son menores que Numero 3: ${numero3}`;
-            // console.log(resultado);
-            // return resultado;
-        }
+    if(numero1 == numero2) {
+        resultado = numero1 > numero3 
+        ? `Numero 1 y Numero 2 son iguales: ${numero1} ${numero2} y son mayores que Numero 3: ${numero3}` 
+        : `Numero 1 y Numero 2 son iguales: ${numero1} ${numero2} y son menores que Numero 3: ${numero3}`;
     }
-    else if(numero2 == numero3){
-        // resultado = `Numero 2 y Numero 3 son iguales: ${numero2}`;
-        // console.log(resultado);
-        if(numero2 > numero1){
-            resultado = `Numero 2 y Numero 3 son iguales: ${numero2} ${numero3} y son mayores que Numero 1: ${numero1}`;
-            // console.log(resultado);
-            // return resultado;
-        }
-        else {
-            resultado = `Numero 2 y Numero 3 son iguales: ${numero2} ${numero3} y son menores que Numero 1: ${numero1}`;
-            // console.log(resultado);
-            // return resultado;
-        }
+
+    else if (numero2 == numero3) {
+        resultado = numero2 > numero1 
+        ? `Numero 2 y Numero 3 son iguales: ${numero2} ${numero3} y son mayores que Numero 1: ${numero1}` 
+        : `Numero 2 y Numero 3 son iguales: ${numero2} ${numero3} y son menores que Numero 1: ${numero1}`;
     }
+
     else if (numero1 == numero3){
-        // resultado = `Numero 1 y Numero 3 son iguales: ${numero3}`;
-        // console.log(resultado);
-        if(numero1 > numero2){
-            resultado = `Numero 1 y Numero 3 son iguales: ${numero1} ${numero3} y son mayores que Numero 2: ${numero2}`;
-            // console.log(resultado);
-            // return resultado;
-        }
-        else {
-            resultado = `Numero 1 y Numero 3 son iguales: ${numero1} ${numero3} y son menores que Numero 2: ${numero2}`;
-            // console.log(resultado);
-            // return resultado;
-        }
+        resultado = numero1 > numero2 
+        ? `Numero 1 y Numero 3 son iguales: ${numero1} ${numero3} y son mayores que Numero 2: ${numero2}` 
+        : `Numero 1 y Numero 3 son iguales: ${numero1} ${numero3} y son menores que Numero 2: ${numero2}`;
     }
 
     //4-7-9
