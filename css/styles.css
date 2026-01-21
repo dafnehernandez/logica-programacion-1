@@ -1,0 +1,20 @@
+#result-output {
+    white-space: pre-line;
+    font-weight: 500;
+    font-size: 1.05rem;
+
+    background-color: #fff3cd;   /* ámbar suave */
+    color: #664d03;              /* texto oscuro */
+    border: 1px solid #ffecb5;
+    border-left: 6px solid #ffc107;
+    border-radius: 0.5rem;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e1c994, #cb71a0);
+}
+
+.card {
+    border-radius: 1rem;
+}

@@ -8,10 +8,6 @@ function showResult() {
     const resultOutput = document.getElementById('result-output');
     if (resultOutput) {
         resultOutput.textContent = result;
-        // estilos para el resultado
-        resultOutput.style.fontWeight = '600';
-        resultOutput.style.color = '#b0652b';
-        resultOutput.style.whiteSpace = 'pre-line';
     }
 }
 
