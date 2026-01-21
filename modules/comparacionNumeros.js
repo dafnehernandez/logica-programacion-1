@@ -14,31 +14,30 @@ if(isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
     return "Error, ingresa numeros validos";
 }
 
-let resultado="";
-
+let mensaje="", resultado="";
 
     // Verificar si los tres números son iguales
     if (numero1 === numero2 && numero2 === numero3) {
-        resultado = `Los tres números son iguales: ${numero1}`;
-        console.log(resultado);
-        return resultado;
+        mensaje = `Los tres números son iguales: ${numero1}`;
+        console.log(mensaje);
+        return mensaje;
     } 
 
     //verificar si hay numeros iguales
     if(numero1 == numero2) {
-        resultado = numero1 > numero3 
+        mensaje = numero1 > numero3 
         ? `Numero 1 y Numero 2 son iguales: ${numero1} ${numero2} y son mayores que Numero 3: ${numero3}` 
         : `Numero 1 y Numero 2 son iguales: ${numero1} ${numero2} y son menores que Numero 3: ${numero3}`;
     }
 
     else if (numero2 == numero3) {
-        resultado = numero2 > numero1 
+        mensaje = numero2 > numero1 
         ? `Numero 2 y Numero 3 son iguales: ${numero2} ${numero3} y son mayores que Numero 1: ${numero1}` 
         : `Numero 2 y Numero 3 son iguales: ${numero2} ${numero3} y son menores que Numero 1: ${numero1}`;
     }
 
     else if (numero1 == numero3){
-        resultado = numero1 > numero2 
+        mensaje = numero1 > numero2 
         ? `Numero 1 y Numero 3 son iguales: ${numero1} ${numero3} y son mayores que Numero 2: ${numero2}` 
         : `Numero 1 y Numero 3 son iguales: ${numero1} ${numero3} y son menores que Numero 2: ${numero2}`;
     }
@@ -57,13 +56,22 @@ let resultado="";
 
     // Mostrar los valores guardados en la consola
     console.log(`Números ingresados: ${numero1}, ${numero2}, ${numero3}`);
+    //orden ascendente/descendente
+    console.log(`Orden descendente: ${ordenDescendente.join(", ")}`);
+    console.log(`Orden ascendente: ${ordenAscendente.join(", ")}`);
 
-    console.log (resultado == "" 
+    let evaluacion =  mensaje == "" 
         ? `Número mayor: ${mayor}, Número del centro: ${centro}, Número menor: ${menor}\n\n`
-        : resultado)
+        : `${mensaje}\n\n`;
+
+    console.log (evaluacion);
+
+    //Se forma mensaje de resultado
+    resultado += `Números ingresados: ${numero1}, ${numero2}, ${numero3}` 
+              + evaluacion 
+              + `Orden descendente: ${ordenDescendente.join(", ")}\n Orden ascendente: ${ordenAscendente.join(", ")}`;
 
     //console.log(resultado `Número mayor: ${mayor}\n` + `Número del centro: ${centro}\n` +`Número menor: ${menor}\n\n`); //mensaje
-    //orden ascendente/descendente
 
     return resultado;
 }
