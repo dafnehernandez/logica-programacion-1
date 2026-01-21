@@ -15,7 +15,7 @@ if(isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
 }
 
 let resultado="";
-let mayor,menor,centrado;
+
 
     // Verificar si los tres números son iguales
     if (numero1 === numero2 && numero2 === numero3) {
@@ -43,35 +43,26 @@ let mayor,menor,centrado;
         : `Numero 1 y Numero 3 son iguales: ${numero1} ${numero3} y son menores que Numero 2: ${numero2}`;
     }
 
-    //4-7-9
-    if(numero1 > numero2){
-        if(numero1 > numero3){
-            console.log("El número más grande es el primer numero ingresado: ", numero1);
-            mayor = "El número más grande es el primer número ingresado: " + numero1;
-        }
-        else {
-            console.log("El número más grande es el tercer numero ingresado: ", numero3);
-            mayor = "El número más grande es el tercer número ingresado: " + numero3;
-        }
-    }
+    // Crear array con los números
+    const numeros = [numero1, numero2, numero3];
 
-    //numero 2 fue mas grande
-    else if (numero2 > numero3) {
-        console.log("El numero más grande es el segundo numero ingresado:", numero2);
-        mayor = "El número más grande es el segundo número ingresado: " + numero2;
-    }
+    // Crear copias ordenadas
+    const ordenDescendente = [numero1, numero2, numero3].sort((a, b) => b - a);
+    const ordenAscendente  = [numero1, numero2, numero3].sort((a, b) => a - b);
 
-    //numero 3 es definitivamente el más grande
-    else{
-        console.log("El número más grande es el tercer numero ingresado: ", numero3);
-        mayor = "El número más grande es el tercer número ingresado: " + numero3;
-    }
-
-    resultado = mayor;
+    // Obtener mayor, centro y menor
+    const mayor = ordenDescendente[0];
+    const centro = ordenDescendente[1];
+    const menor = ordenDescendente[2];
 
     // Mostrar los valores guardados en la consola
     console.log(`Números ingresados: ${numero1}, ${numero2}, ${numero3}`);
-    console.log(resultado); //mensaje
+
+    console.log (resultado == "" 
+        ? `Número mayor: ${mayor}, Número del centro: ${centro}, Número menor: ${menor}\n\n`
+        : resultado)
+
+    //console.log(resultado `Número mayor: ${mayor}\n` + `Número del centro: ${centro}\n` +`Número menor: ${menor}\n\n`); //mensaje
     //orden ascendente/descendente
 
     return resultado;
